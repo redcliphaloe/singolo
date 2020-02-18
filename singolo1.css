@@ -1,0 +1,17 @@
+.logo {
+    text-transform: uppercase;
+}
+
+.logo__asterisk {
+    color: #f06c64;
+}
+
+.menu__list {
+    display: flex;
+    width: 370px;
+}
+
+.menu__link {
+    text-transform: uppercase;
+    text-decoration: none;
+}
