@@ -2,72 +2,114 @@
     outline: 1px dashed rgba(128, 128, 128, 0.5);
 }
 
-.wrapper {
-    max-width: 1020px; 
+.wrapper {    
     margin: auto;   
+    max-width: 1020px;
 }
 
 .header {
-    display: flex;
-    height: 89px;
-    background-color: #2d303a;
     align-items: center;
+    background-color: #2d303a;
+    box-shadow: 0 6px #323746;
+    display: flex;
+    height: 89px;    
     justify-content: space-between;
     padding: 0 40px;
+    position: relative;
+    z-index: 2;    
 }
 
 .logo {
     color: #fff;
-    text-transform: uppercase;
     font-family: 'Lato', sans-serif;
     font-size: 25px;
     font-weight: 400;
     height: 20px;
     line-height: 20px;
     margin: 0px;
+    text-transform: uppercase;
 }
 
-.logo__asterisk {
+.logo .logo__asterisk {
     color: #f06c64;
 }
 
-.header__logo {
-    margin-top: -3px;
-    margin-left: -1px;;
+.header .header__logo {
+    margin-left: -1px;
+    margin-top: -3px;    
 }
 
 .menu .menu__list {
     display: flex;
     justify-content: space-between;
-    width: 372px;
     list-style: none;
-    margin: 0px;
+    margin: 0px;    
     padding: 0px;
+    width: 372px;    
 }
 
-.menu .menu__item:not(:first-child) ::before {
-    content: "•"; 
+.menu .menu__item:not(:first-child) ::before {     
     color: #494e62;
+    content: "•";
     display: inline-block;
-    width: 1em;
     margin-left: -1em;
-    transform: translate(-7px, 1px) scale(0.55);
+    transform: translate(-7px, 1px) scale(0.55);    
+    width: 1em;
 }
 
 .menu .menu__link {
     color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
     font-weight: 400;    
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .menu .menu__link:hover {
     color: #f06c64;
 }
 
-.header__menu {
-    margin-top: 6px;
-    margin-right: -1px;;
+.header .header__menu {
+    margin-right: -1px;
+    margin-top: 6px;    
+}
+
+.slider {
+    align-items: center;
+    background-color: #f06c64;
+    box-shadow: 0 6px #ea676b;
+    display: flex;
+    height: 600px;    
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.slider .slider__button {
+    background: url("assets/images/slider\'s\ left\ arrow.svg") center no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 27px;
+    margin: auto 0 auto 42px;
+    width: 16px;
+}
+
+.slider .slider__button.slider__button--direction--right {
+    margin: auto 40px auto 2px;
+    transform: rotate(180deg);
+}
+
+.slider .slider__image {
+    margin: auto;
+}
+
+.features {
+    background-color: #f2f2f2;
+    box-shadow: 0 6px #ffffff;
+    height: 496px;
+}
+
+.gag {
+    height: 6px;
 }
