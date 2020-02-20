@@ -1,5 +1,5 @@
 * {
-    outline: 1px dashed rgba(128, 128, 128, 0.5);
+    /* outline: 1px dashed rgba(128, 128, 128, 0.5); */
 }
 
 .wrapper {    
@@ -23,10 +23,10 @@
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 700;
     height: 20px;
     line-height: 20px;
-    margin: 0px;
+    margin: 0;
     text-transform: uppercase;
 }
 
@@ -43,12 +43,12 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin: 0px;    
-    padding: 0px;
+    margin: 0;    
+    padding: 0;
     width: 372px;    
 }
 
-.menu .menu__item:not(:first-child) ::before {     
+.menu li:not(:first-child) ::before {     
     color: #494e62;
     content: "•";
     display: inline-block;
@@ -61,7 +61,7 @@
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
-    font-weight: 400;    
+    font-weight: 700;    
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -100,14 +100,99 @@
     transform: rotate(180deg);
 }
 
+.slider .slider__button:active {
+    cursor: none;
+}
+
+.slider .slider__button:focus {
+    outline: none;
+}
+
+.slider .slider__button:hover {
+    transform: scale(1.33);
+}
+
+.slider .slider__button.slider__button--direction--right:hover {
+    transform: rotate(180deg) scale(1.33);
+}
+
 .slider .slider__image {
     margin: auto;
 }
 
 .features {
     background-color: #f2f2f2;
+    box-sizing: border-box;
     box-shadow: 0 6px #ffffff;
-    height: 496px;
+    color: #666d89;
+    font-family: 'Lato', sans-serif;      
+    height: 500px;
+    padding: 65px 31px 66px;
+}
+
+.feature {
+    box-sizing: border-box;
+    padding-left: 79px;
+    position: relative;
+    width: 299px;     
+}
+
+.feature .feature__caption {
+    color: #666d89;
+    font-family: 'Lato', sans-serif;      
+    font-size: 18px;
+    font-weight: 900;   
+    margin: 0 0 8px;
+    width: 220px;
+}
+
+.feature .feature__description {
+    color: #767e9e;
+    font-family: 'Lato', sans-serif;      
+    font-size: 12px;
+    font-weight: 400; 
+    height: 69px;
+    line-height: 22px;
+    margin: 0;
+    overflow: hidden;
+    padding-top: -5px;
+    text-align: justify;
+    width: 220px;
+}
+
+.feature .feature__image {
+    left: -2px;
+    position: absolute;
+    top: 4px;
+}
+
+.features .features__caption {    
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    padding-left: 9px;
+}
+
+.features .features__description {    
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    padding-left: 9px;
+    padding-right: 9px;
+    text-align: justify;
+}
+
+.features .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.features .features__item {
+    margin-top: 24px;
 }
 
 .gag {
