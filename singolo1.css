@@ -16,7 +16,7 @@
     justify-content: space-between;
     padding: 0 40px;
     position: relative;
-    z-index: 2;    
+    z-index: 100;    
 }
 
 .logo {
@@ -48,13 +48,11 @@
     width: 372px;    
 }
 
-.menu li:not(:first-child) ::before {     
+.menu .menu__item:nth-child(n+2)::before {         
     color: #494e62;
     content: "•";
     display: inline-block;
-    margin-left: -1em;
-    transform: translate(-7px, 1px) scale(0.55);    
-    width: 1em;
+    transform: translate(-11px, 2px) scale(0.6);
 }
 
 .menu .menu__link {
@@ -83,7 +81,7 @@
     height: 600px;    
     justify-content: center;
     position: relative;
-    z-index: 1;
+    z-index: 99;
 }
 
 .slider .slider__button {
@@ -123,11 +121,13 @@
 .features {
     background-color: #f2f2f2;
     box-sizing: border-box;
-    box-shadow: 0 6px #fff;
+    box-shadow: 0 6px #ffffff;
     color: #666d89;
     font-family: 'Lato', sans-serif;      
     height: 500px;
-    padding: 65px 31px 66px;
+    padding: 65px 29px 66px 32px;
+    position: relative;
+    z-index: 98;    
 }
 
 .feature {
@@ -170,7 +170,7 @@
     font-size: 30px;
     font-weight: 900;
     margin: 0;
-    padding-left: 9px;
+    padding-left: 8px;
 }
 
 .features .features__description {    
@@ -178,7 +178,7 @@
     font-weight: 300;
     line-height: 30px;
     padding-left: 9px;
-    padding-right: 9px;
+    padding-right: 11px;
     text-align: justify;
 }
 
@@ -197,4 +197,6 @@
 
 .gag {
     height: 6px;
+    position: relative;
+    z-index: 97;    
 }
