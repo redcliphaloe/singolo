@@ -80,6 +80,10 @@
 
 }
 
+.imageGallery .imageGallery__item:nth-of-type(n+13) {
+    display: none;
+}
+
 .imageGallery .imageGallery__image {
     height: 187px;
     margin-bottom: 20px;
@@ -152,6 +156,8 @@
     font-weight: 900;
     line-height: 18px;
     margin: 17px 0 0 0;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .photoGalleryItem .photoGalleryItem__description {        
