@@ -13,12 +13,61 @@
 <body class="wrapper">
     <main>
         <section class="section feedback">
-            <h2 class="section__caption">Portfolio</h2>
-            <p class="section__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <div class="section__content"></div>            
+            <h2 class="section__caption">Get a Quote</h2>
+            <p class="section__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <div class="section__content">
+                <form action="#" class="form" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Name (Required)" required>
+                    <input type="email" name="email" id="email" placeholder="Email (Required)" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="describe" id="describe" cols="20" rows="10" placeholder="Describe your project in detail..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="contact">
+                    <h3 class="contact__caption">Contact Information</h3>
+                    <p class="contact__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                    <ul class="contact__list">
+                        <li class="contact__item contact__item--geo">
+                            Elm St. 14/05 Lost City
+                        </li>
+                        <li class="contact__item contact__item--geo">
+                            <a href="tel:03528 331 86 35" class="contact__link">03528 331 86 35</a>
+                        </li>
+                        <li class="contact__item contact__item--geo">
+                            <a href="mailto:info@singolo.com" class="contact__link">info@singolo.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
         </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <img src="assets/images/© Copyright 2013 · by PSDchat.com.svg" alt="copytight" class="copyright">
+        <nav class="links">
+            <ul class="photoGalleryItem__socialList">
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/facebook-2.svg" alt="facebook" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/google+-2.svg" alt="google+" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/twitter-2.svg" alt="twitter" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/linkedin-2.svg" alt="linkedin" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+            </ul>          
+        </nav>
+    </footer>
 </body>
 </html>
