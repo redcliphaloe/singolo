@@ -1,0 +1,51 @@
+* {
+    outline: 1px dashed rgba(128, 128, 128, 0.5);
+}
+
+.wrapper {    
+    margin: auto;   
+    max-width: 1020px;
+}
+
+.section {
+    box-sizing: border-box;
+    color: #666d89;
+    font-family: 'Lato', sans-serif;  
+    padding: 69px 41px;  
+}
+
+.section .section__caption {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 18px;
+    margin: 0;
+}
+
+.section .section__description {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 27px 0 0 0;
+    text-align: justify;
+}
+
+.feedback {
+    background-color: #f06c64;
+    box-shadow: 0 6px #ea676b;
+    height: 648px;  
+    position: relative;
+    z-index: 95;    
+}
+
+.footer {
+    background-color: #2d303a;    
+    height: 82px;
+    position: relative;
+    z-index: 94;     
+}
+
+.gag {
+    height: 12px;
+    position: relative;
+    z-index: 93;    
+}
