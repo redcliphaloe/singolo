@@ -6,11 +6,291 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Singolo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" integrity="sha256-/O+WvT2Eeb1RIU6iMItEhi5xlHTCLHg2HgLmVGFWyW8=" crossorigin="anonymous" />
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="singolo.css">
 </head>
 <body class="wrapper">
+    <header class="header">
+        <h1 class="logo header__logo">Singolo<span class="logo__asterisk">*</span></h1>
+        <nav class="menu header__menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+            </ul>
+        </nav>        
+    </header>
 
+    <main>
+        <section class="slider">
+            <button class="slider__button"></button>
+            <img src="assets/images/two iPhones.png" alt="two iPhones" class="slider__image">
+            <button class="slider__button slider__button--direction--right qwe"></button>
+        </section>
+
+        <section class="features">
+            <h2 class="features__caption">Our Services</h2>          
+            <p class="features__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>            
+            <ul class="features__list">
+                <li class="features__item">
+                    <div class="feature">
+                        <h3 class="feature__caption">Custom Design</h3>
+                        <p class="feature__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                        <img src="assets/images/pen.svg" alt="pen" class="feature__image">
+                    </div>
+                </li>
+                <li class="features__item">
+                    <div class="feature">
+                        <h3 class="feature__caption">Inovative Ideas</h3>
+                        <p class="feature__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                        <img src="assets/images/bulb.svg" alt="bulb" class="feature__image">
+                    </div>
+                </li>
+                <li class="features__item">
+                    <div class="feature">
+                        <h3 class="feature__caption">Love Is The Answer</h3>
+                        <p class="feature__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                        <img src="assets/images/heart.svg" alt="heart" class="feature__image">
+                    </div>
+                </li>
+                <li class="features__item">
+                    <div class="feature">
+                        <h3 class="feature__caption">Responsive Layout</h3>
+                        <p class="feature__description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+                        <img src="assets/images/phone.svg" alt="phone" class="feature__image">
+                    </div>
+                </li>
+                <li class="features__item">
+                    <div class="feature">
+                        <h3 class="feature__caption">24 / 7 Support</h3>
+                        <p class="feature__description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+                        <img src="assets/images/bubble.svg" alt="bubble" class="feature__image">
+                    </div>
+                </li>
+                <li class="features__item">
+                    <div class="feature">
+                        <h3 class="feature__caption">Feel Like A Star</h3>
+                        <p class="feature__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+                        <img src="assets/images/star.svg" alt="star" class="feature__image">
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="section portfolio">
+            <h2 class="section__caption">Portfolio</h2>
+            <p class="section__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            <div class="imageGallery">
+                <ul class="imageGallery__filterList">
+                    <li class="imageGallery__filterItem"><button class="imageGallery__filterButton imageGallery__filterButton--active">All</button></li>
+                    <li class="imageGallery__filterItem"><button class="imageGallery__filterButton">Web Design</button></li>
+                    <li class="imageGallery__filterItem"><button class="imageGallery__filterButton">Graphic Design</button></li>
+                    <li class="imageGallery__filterItem"><button class="imageGallery__filterButton">Artwork</button></li>
+                </ul>
+                <ul class="imageGallery__list">
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 01.jpeg" alt="image 01"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 02.jpeg" alt="image 02"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 03.jpeg" alt="image 03"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 04.jpeg" alt="image 04"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 05.jpeg" alt="image 05"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 06.jpeg" alt="image 06"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 07.jpeg" alt="image 07"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 08.jpeg" alt="image 08"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 09.jpeg" alt="image 09"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 10.jpeg" alt="image 10"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 11.jpeg" alt="image 11"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 12.jpeg" alt="image 12"></div>
+                    </li>
+                    <li class="imageGallery__item">
+                        <div class="imageGallery__image"><img src="assets/images/portfolio image 12.jpeg" alt="image 12"></div>
+                    </li>                                                                                                   
+                </ul>
+            </div>
+        </section>
+
+        <section class="section about">
+            <h2 class="section__caption">About Us</h2>
+            <p class="section__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>            
+            <div class="photoGallery">
+                <ul class="photoGallery__list">
+                    <li class="photoGallery__item">
+                        <div class="photoGalleryItem">
+                            <div class="photoGalleryItem__image">
+                                <img src="assets/images/about us photo 1.jpeg" alt="Adam Jensen" class="">
+                            </div>                            
+                            <h3 class="photoGalleryItem__caption">Adam Jensen</h3>
+                            <p class="photoGalleryItem__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                            <ul class="photoGalleryItem__socialList">
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/facebook.svg" alt="facebook" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/google+.svg" alt="google+" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/twitter.svg" alt="twitter" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/linkedin.svg" alt="linkedin" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </li>
+                    <li class="photoGallery__item">
+                        <div class="photoGalleryItem">
+                            <div class="photoGalleryItem__image">
+                                <img src="assets/images/about us photo 2.jpeg" alt="Desmond Miles" class="">
+                            </div>
+                            <h3 class="photoGalleryItem__caption">Desmond Miles</h3>
+                            <p class="photoGalleryItem__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+                            <ul class="photoGalleryItem__socialList">
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/facebook.svg" alt="facebook" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/google+.svg" alt="google+" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/twitter.svg" alt="twitter" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/linkedin.svg" alt="linkedin" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </li>
+                    <li class="photoGallery__item">
+                        <div class="photoGalleryItem">
+                            <div class="photoGalleryItem__image">
+                                <img src="assets/images/about us photo 3.jpeg" alt="Scolara Visari" class="">
+                            </div>                            
+                            <h3 class="photoGalleryItem__caption">Scolara Visari</h3>
+                            <p class="photoGalleryItem__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                            <ul class="photoGalleryItem__socialList">
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/facebook.svg" alt="facebook" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/google+.svg" alt="google+" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/twitter.svg" alt="twitter" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                                <li class="photoGalleryItem__socialItem">
+                                    <a href="#" class="photoGalleryItem__socialLink">
+                                        <img src="assets/images/linkedin.svg" alt="linkedin" class="photoGalleryItem__socialImage">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </li>
+                </ul>
+            </div>
+        </section>   
+        
+        <section class="section feedback">
+            <h2 class="section__caption">Get a Quote</h2>
+            <p class="section__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <div class="section__content">
+                <form action="#" class="form" method="POST">
+                    <input type="text" name="name" id="name" placeholder="Name (Required)" required>
+                    <input type="email" name="email" id="email" placeholder="Email (Required)" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="describe" id="describe" cols="20" rows="10" placeholder="Describe your project in detail..."></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="contact">
+                    <h3 class="contact__caption">Contact Information</h3>
+                    <p class="contact__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                    <ul class="contact__list">
+                        <li class="contact__item contact__item--geo">
+                            Elm St. 14/05 Lost City
+                        </li>
+                        <li class="contact__item contact__item--tel">
+                            <a href="tel:03528 331 86 35" class="contact__link">03528 331 86 35</a>
+                        </li>
+                        <li class="contact__item contact__item--email">
+                            <a href="mailto:info@singolo.com" class="contact__link">info@singolo.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+        </section>        
+    </main>
+
+    <footer class="footer">
+        <img src="assets/images/© Copyright 2013 · by PSDchat.com-2.svg" alt="copytight" class="copyright">
+        <nav class="links">
+            <ul class="photoGalleryItem__socialList">
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/facebook-2.svg" alt="facebook" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/google+-2.svg" alt="google+" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/twitter-2.svg" alt="twitter" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+                <li class="photoGalleryItem__socialItem">
+                    <a href="#" class="photoGalleryItem__socialLink">
+                        <img src="assets/images/linkedin-2.svg" alt="linkedin" class="photoGalleryItem__socialImage">
+                    </a>
+                </li>
+            </ul>          
+        </nav>
+    </footer>    
 </body>
 </html>
