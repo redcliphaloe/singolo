@@ -1,0 +1,8 @@
+* {
+    /* outline: 1px dashed rgba(128, 128, 128, 0.5); */
+}
+
+.wrapper {    
+    margin: auto;   
+    max-width: 1020px;
+}
