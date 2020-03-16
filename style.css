@@ -548,5 +548,41 @@ html {
     margin-right: 6px; 
 }
 
-/* background: #F06C64; */
-/* background: #648BF0; */
+.ibutton {    
+    border-radius: 50%;
+    cursor: pointer;
+    height: 45px;
+    left: 196px;
+    position: absolute;
+    top: 464px;
+    width: 45px;    
+}
+
+.ibutton.ibutton--second {
+    left: 431px;
+    top: 266px;
+}
+
+.ibutton:hover {
+    border: 1px solid lightgray;
+}
+
+.iscreen {
+    border-radius: 3px;
+    height: 333px;
+    left: 126px;
+    position: absolute;
+    top: 124px;
+    width: 188px;    
+}
+
+.iscreen.iscreen--second {
+    height: 188px;
+    left: 485px;
+    top: 196px;
+    width: 333px;
+}
+
+.iscreen.iscreen--black {
+    background-color: #000;
+}
