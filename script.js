@@ -148,19 +148,18 @@
         let subject = event.target.elements['subject'].value; 
         subject = subject ? 'Тема: ' + subject: 'Без темы';
         let describe = event.target.elements['describe'].value;
-        describe = '<pre>' + (describe ? 'Описание: ' + '' + describe : 'Без описания') + '</pre>';
+        describe = describe ? 'Описание: ' + '' + describe : 'Без описания';
         let notification = document.createElement('div');
         notification.innerHTML = 'Письмо отправлено<br>' + subject + '<br>' + describe;
-        let pre = notification.querySelector('pre');
-        pre.style.fontFamily = '"Lato", sans-serif';
-        pre.style.fontSize = 18 + 'px';
-        pre.style.fontWeight = 300;      
-        pre.style.lineHeight = 30 + 'px';          
-        pre.style.margin = 0;
         document.body.appendChild(notification);   
         let button = document.createElement('button');
         notification.appendChild(button);   
-        button.addEventListener("click", function() {notification.remove()});
+        button.addEventListener("click", function() {
+            notification.remove();
+            document.querySelectorAll('input, textarea').forEach(element => {
+                element.value = '';
+            });
+        });
         button.innerText = 'OK';
         button.style.color = '#2d303a';             
         button.style.borderRadius = 5 + 'px';
@@ -178,12 +177,13 @@
         notification.style.fontFamily = '"Lato", sans-serif';
         notification.style.fontSize = 18 + 'px';
         notification.style.fontWeight = 300;
-        notification.style.padding = 20 + 'px';
-        notification.style.width = 'fit-content';        
-        notification.style.left = (document.documentElement.clientWidth - notification.clientWidth) / 2 + 'px';        
         notification.style.lineHeight = 30 + 'px';
-        notification.style.position = 'fixed';       
-        notification.style.top = (document.documentElement.clientHeight - notification.clientHeight) / 2 + 'px';
-        notification.style.zIndex = '1000';        
+        notification.style.maxWidth = 610 + 'px';
+        notification.style.padding = 20 + 'px';
+        notification.style.position = 'fixed';
+        notification.style.wordBreak = 'break-all';
+        notification.style.zIndex = '1000';  
+        notification.style.left = (document.documentElement.clientWidth - notification.clientWidth) / 2 + 'px';        
+        notification.style.top = (document.documentElement.clientHeight - notification.clientHeight) / 2 + 'px';        
     }    
 })();

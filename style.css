@@ -442,6 +442,7 @@ html {
 
 .form textarea {
     height: 202px;
+    padding-right: 15px;
     padding-top: 7px;
     resize: none;
 }
