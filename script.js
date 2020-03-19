@@ -2,7 +2,7 @@
     let menuLinks = document.querySelectorAll(".menu__link");
     addToggleActiveMenuLinks(menuLinks);    
     
-    const srcSliderImages = ['assets/images/slider image 01.png', 'assets/images/slider image 02.png'];
+    const srcSliderImages = ['assets/images/slider image 1.png', 'assets/images/slider image 2.png'];
     const backgroundColorSliderImages = ['#F06C64', '#648BF0'];
     let srcSliderImagesIndex = 0;
     let slider = document.querySelector(".slider"); 
@@ -18,7 +18,7 @@
         iscreenSecond.classList.toggle('iscreen--black');                              
     });        
     let iscreenSecond = document.querySelector(".iscreen--second");
-    addClickSliderButtons(sliderButtons); 
+    // addClickSliderButtons(sliderButtons); 
 
     let imageGalleryFilterButtons = document.querySelectorAll(".imageGallery__filterButton");
     addToggleActiveImageGalleryFilterButtons(imageGalleryFilterButtons); 
@@ -41,7 +41,7 @@
         }
     }
 
-    function addClickSliderButtons(sliderButtons) {
+    function addClickSliderButtons_20200318(sliderButtons) {
         for (let i = 0; i < sliderButtons.length; i++) {
             let sliderButton = sliderButtons[i];      
             sliderButton.addEventListener("click", function() {
@@ -185,5 +185,58 @@
         notification.style.zIndex = '1000';  
         notification.style.left = (document.documentElement.clientWidth - notification.clientWidth) / 2 + 'px';        
         notification.style.top = (document.documentElement.clientHeight - notification.clientHeight) / 2 + 'px';        
-    }    
+    }      
+
+    let lbutton = document.querySelector('.slider__button');
+    let rbutton = document.querySelector('.slider__button--direction--right');
+    let arrows = document.querySelectorAll('.slider__button');
+    let limage = document.querySelector('.slider__image--left');
+    let cimage = document.querySelector('.slider__image--center');
+    let rimage = document.querySelector('.slider__image--right');
+    let timerId;
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', function () {      
+            clearTimeout(timerId); 
+            if (arrow.classList.contains('slider__button--direction--right')) {
+                srcSliderImagesIndex == srcSliderImages.length - 1 ? srcSliderImagesIndex = 0 : srcSliderImagesIndex++;
+                limage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
+                limage.style.transform = 'translateX(100%)';
+                cimage.style.transform = 'translateX(100%)';
+                limage.style.transition = 'transform linear 1s';
+                cimage.style.transition = 'transform linear 1s';                 
+            } else {
+                srcSliderImagesIndex == 0 ? srcSliderImagesIndex = srcSliderImages.length - 1 : srcSliderImagesIndex--;
+                rimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
+                cimage.style.transform = 'translateX(-100%)';
+                rimage.style.transform = 'translateX(-100%)';
+                cimage.style.transition = 'transform linear 1s';
+                rimage.style.transition = 'transform linear 1s';                 
+            }          
+        });      
+        arrow.addEventListener('click', function () {       
+            timerId = setInterval(() => {
+                rbutton.click();
+            }, 5000);            
+            if (arrow.classList.contains('slider__button--direction--right')) {
+                setTimeout(() => {
+                    limage.style.transform = 'translateX(0)';
+                    cimage.style.transform = 'translateX(0)';
+                    limage.style.transition = '';
+                    cimage.style.transition = '';      
+                    cimage.style.background = limage.style.background;                    
+                }, 1000);                  
+            } else {
+                setTimeout(() => {
+                    cimage.style.transform = 'translateX(0)';
+                    rimage.style.transform = 'translateX(0)';
+                    cimage.style.transition = '';
+                    rimage.style.transition = ''; 
+                    cimage.style.background = rimage.style.background;
+                }, 1000);               
+            }          
+        });           
+        
+    });
+    cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
+    rbutton.click();
 })();

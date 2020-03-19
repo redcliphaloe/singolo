@@ -96,10 +96,13 @@ html {
     align-items: center;
     background-color: #f06c64;
     box-shadow: 0 6px #ea676b;
-    display: flex;
+    /* display: flex; */
+    font-size: 0;
     height: 600px;    
     justify-content: center;
+    overflow: hidden;
     position: relative;
+    white-space: nowrap;
     z-index: 99;
 }
 
@@ -108,12 +111,16 @@ html {
     border: none;
     cursor: pointer;
     height: 27px;
-    margin: auto 0 auto 42px;
+    margin-top: 287px;
+    left: 42px;
+    position: absolute;
     width: 16px;
+    z-index: 99;
 }
 
 .slider .slider__button.slider__button--direction--right {
-    margin: auto 40px auto 2px;
+    left: unset;
+    right: 40px;
     transform: rotate(180deg);
 }
 
@@ -129,12 +136,24 @@ html {
     transform: scale(1.33);
 }
 
+.slider .slider__button--fromLeft {
+    transform: translateX(-100%);
+}
+
+.slider .slider__button--fromRight {
+    transform: translateX(100%);
+}
+
 .slider .slider__button.slider__button--direction--right:hover {
     transform: rotate(180deg) scale(1.33);
 }
 
 .slider .slider__image {
-    margin: auto;
+    display: inline-block;    
+    height: 600px;
+    left: -1020px;
+    position: relative;
+    width: 1020px;
 }
 
 .features {
