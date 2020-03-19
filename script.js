@@ -41,18 +41,12 @@
         }
     }
 
-    function addClickSliderButtons_20200318(sliderButtons) {
+    function addClickSliderButtons(sliderButtons) {
         for (let i = 0; i < sliderButtons.length; i++) {
             let sliderButton = sliderButtons[i];      
             sliderButton.addEventListener("click", function() {
-                if (sliderButton.classList.contains('slider__button--direction--right')) {
-                    srcSliderImagesIndex == srcSliderImages.length - 1 ? srcSliderImagesIndex = 0 : srcSliderImagesIndex++;
-                } else {
-                    srcSliderImagesIndex == 0 ? srcSliderImagesIndex = srcSliderImages.length - 1 : srcSliderImagesIndex--;
-                }
-                sliderImage.src = srcSliderImages[srcSliderImagesIndex];
-                slider.style.backgroundColor = backgroundColorSliderImages[srcSliderImagesIndex];
-                if (!srcSliderImagesIndex) {
+            // if (!srcSliderImagesIndex) {
+            if (cimage.style.background == 'url("assets/images/slider image 1.png") no-repeat center') {
                     ibutton = document.createElement('div');
                     ibutton.classList.add('ibutton');                              
                     slider.appendChild(ibutton);
@@ -75,8 +69,7 @@
                     ibutton.remove();
                     iscreen.remove();
                     ibuttonSecond.remove();
-                    iscreenSecond.remove();
-                    
+                    iscreenSecond.remove();                    
                 }
             });	
         }
@@ -193,7 +186,10 @@
     let limage = document.querySelector('.slider__image--left');
     let cimage = document.querySelector('.slider__image--center');
     let rimage = document.querySelector('.slider__image--right');
-    let timerId;
+    let timerId = setTimeout(() => {
+        rbutton.click();
+    }, 5000);
+    cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';        
     arrows.forEach(arrow => {
         arrow.addEventListener('click', function () {      
             clearTimeout(timerId); 
@@ -216,7 +212,8 @@
         arrow.addEventListener('click', function () {       
             timerId = setInterval(() => {
                 rbutton.click();
-            }, 5000);            
+            }, 5000);      
+            turnPhones();      
             if (arrow.classList.contains('slider__button--direction--right')) {
                 setTimeout(() => {
                     limage.style.transform = 'translateX(0)';
@@ -237,6 +234,32 @@
         });           
         
     });
-    cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
-    rbutton.click();
+
+    function turnPhones() {        
+        if (!srcSliderImagesIndex) {
+            ibutton = document.createElement('div');
+            ibutton.classList.add('ibutton');                              
+            slider.appendChild(ibutton);
+            ibutton.addEventListener('click', function() {
+                iscreen.classList.toggle('iscreen--black');                              
+            });                       
+            iscreen = document.createElement('div');
+            iscreen.classList.add('iscreen');
+            slider.appendChild(iscreen);
+            ibuttonSecond = document.createElement('div');
+            ibuttonSecond.classList.add('ibutton', 'ibutton--second');
+            slider.appendChild(ibuttonSecond);  
+            ibuttonSecond.addEventListener('click', function() {
+                iscreenSecond.classList.toggle('iscreen--black');                              
+            });                        
+            iscreenSecond = document.createElement('div');
+            iscreenSecond.classList.add('iscreen', 'iscreen--second');
+            slider.appendChild(iscreenSecond);                      
+        } else {
+            ibutton.remove();
+            iscreen.remove();
+            ibuttonSecond.remove();
+            iscreenSecond.remove();                    
+        }
+    }
 })();
