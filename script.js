@@ -190,8 +190,11 @@
     }, 5000);
     cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';        
     arrows.forEach(arrow => {
-        arrow.addEventListener('click', function () {      
-            clearTimeout(timerId); 
+        arrow.addEventListener('click', function () {    
+            arrows.forEach(arrow => {
+                arrow.disabled = 'true';
+            });               
+            clearTimeout(timerId);             
             if (arrow.classList.contains('slider__button--direction--right')) {
                 srcSliderImagesIndex == 0 ? srcSliderImagesIndex = srcSliderImages.length - 1 : srcSliderImagesIndex--;
                 rimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
@@ -223,8 +226,7 @@
         arrow.addEventListener('click', function () {       
             timerId = setTimeout(() => {
                 rbutton.click();
-            }, 5000);              
-            arrow.disabled = 'true';          
+            }, 5000);                     
             if (arrow.classList.contains('slider__button--direction--right')) {
                 setTimeout(() => {
                     cimage.style.transform = 'translateX(0)';
@@ -232,7 +234,9 @@
                     cimage.style.transition = '';
                     rimage.style.transition = ''; 
                     cimage.style.background = rimage.style.background; 
-                    arrow.disabled = '';
+                    arrows.forEach(arrow => {
+                        arrow.disabled = '';
+                    });  
                     turnPhones();
                 }, 1000);   
             } else {
@@ -242,7 +246,9 @@
                     limage.style.transition = '';
                     cimage.style.transition = '';      
                     cimage.style.background = limage.style.background;
-                    arrow.disabled = '';
+                    arrows.forEach(arrow => {
+                        arrow.disabled = '';
+                    });  
                     turnPhones();                 
                 }, 1000);                             
             }          
