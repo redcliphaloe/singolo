@@ -45,7 +45,6 @@
         for (let i = 0; i < sliderButtons.length; i++) {
             let sliderButton = sliderButtons[i];      
             sliderButton.addEventListener("click", function() {
-            // if (!srcSliderImagesIndex) {
             if (cimage.style.background == 'url("assets/images/slider image 1.png") no-repeat center') {
                     ibutton = document.createElement('div');
                     ibutton.classList.add('ibutton');                              
@@ -194,42 +193,58 @@
         arrow.addEventListener('click', function () {      
             clearTimeout(timerId); 
             if (arrow.classList.contains('slider__button--direction--right')) {
-                srcSliderImagesIndex == srcSliderImages.length - 1 ? srcSliderImagesIndex = 0 : srcSliderImagesIndex++;
-                limage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
-                limage.style.transform = 'translateX(100%)';
-                cimage.style.transform = 'translateX(100%)';
-                limage.style.transition = 'transform linear 1s';
-                cimage.style.transition = 'transform linear 1s';                 
-            } else {
                 srcSliderImagesIndex == 0 ? srcSliderImagesIndex = srcSliderImages.length - 1 : srcSliderImagesIndex--;
                 rimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
                 cimage.style.transform = 'translateX(-100%)';
                 rimage.style.transform = 'translateX(-100%)';
                 cimage.style.transition = 'transform linear 1s';
-                rimage.style.transition = 'transform linear 1s';                 
+                rimage.style.transition = 'transform linear 1s'; 
+                iscreen.style.transform = 'translateX(-1020px)'; 
+                iscreenSecond.style.transform = 'translateX(-1020px)';
+                iscreen.style.transition = 'transform linear 1s';
+                iscreenSecond.style.transition = 'transform linear 1s'; 
+                ibutton.style.border = 'none';
+                ibutton.style.cursor = 'auto';
+                ibuttonSecond.style.border = 'none';
+                ibuttonSecond.style.cursor = 'auto';            
+            } else {
+                srcSliderImagesIndex == srcSliderImages.length - 1 ? srcSliderImagesIndex = 0 : srcSliderImagesIndex++;
+                limage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
+                limage.style.transform = 'translateX(100%)';
+                cimage.style.transform = 'translateX(100%)';
+                limage.style.transition = 'transform linear 1s';
+                cimage.style.transition = 'transform linear 1s';  
+                iscreen.style.transform = 'translateX(1020px)'; 
+                iscreenSecond.style.transform = 'translateX(1020px)'; 
+                iscreen.style.transition = 'transform linear 1s';
+                iscreenSecond.style.transition = 'transform linear 1s'; 
             }          
         });      
         arrow.addEventListener('click', function () {       
-            timerId = setInterval(() => {
+            timerId = setTimeout(() => {
                 rbutton.click();
-            }, 5000);      
-            turnPhones();      
+            }, 5000);              
+            arrow.disabled = 'true';          
             if (arrow.classList.contains('slider__button--direction--right')) {
-                setTimeout(() => {
-                    limage.style.transform = 'translateX(0)';
-                    cimage.style.transform = 'translateX(0)';
-                    limage.style.transition = '';
-                    cimage.style.transition = '';      
-                    cimage.style.background = limage.style.background;                    
-                }, 1000);                  
-            } else {
                 setTimeout(() => {
                     cimage.style.transform = 'translateX(0)';
                     rimage.style.transform = 'translateX(0)';
                     cimage.style.transition = '';
                     rimage.style.transition = ''; 
-                    cimage.style.background = rimage.style.background;
-                }, 1000);               
+                    cimage.style.background = rimage.style.background; 
+                    arrow.disabled = '';
+                    turnPhones();
+                }, 1000);   
+            } else {
+                setTimeout(() => {
+                    limage.style.transform = 'translateX(0)';
+                    cimage.style.transform = 'translateX(0)';
+                    limage.style.transition = '';
+                    cimage.style.transition = '';      
+                    cimage.style.background = limage.style.background;
+                    arrow.disabled = '';
+                    turnPhones();                 
+                }, 1000);                             
             }          
         });           
         

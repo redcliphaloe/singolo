@@ -575,7 +575,7 @@ html {
     left: 197px;
     position: absolute;
     top: 459px;
-    width: 45px;    
+    width: 45px;  
 }
 
 .ibutton.ibutton--second {
@@ -592,9 +592,9 @@ html {
     height: 333px;
     left: 126px;
     position: absolute;
-    top: 119px;
+    top: 119px;    
     width: 188px;    
-    transition: background-color linear 1s; 
+    transition: background-color linear 1s;   
 }
 
 .iscreen.iscreen--second {
