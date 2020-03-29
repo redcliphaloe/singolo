@@ -45,7 +45,7 @@
         for (let i = 0; i < sliderButtons.length; i++) {
             let sliderButton = sliderButtons[i];      
             sliderButton.addEventListener("click", function() {
-            if (cimage.style.background == 'url("assets/images/slider image 1.png") no-repeat center') {
+            if (cimage.style.background == 'url("assets/images/slider image 1.png") no-repeat center/contain') {
                     ibutton = document.createElement('div');
                     ibutton.classList.add('ibutton');                              
                     slider.appendChild(ibutton);
@@ -187,8 +187,8 @@
     let rimage = document.querySelector('.slider__image--right');
     let timerId = setTimeout(() => {
         rbutton.click();
-    }, 5000);
-    cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';        
+    }, 500000000);
+    cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center/contain';        
     arrows.forEach(arrow => {
         arrow.addEventListener('click', function () {    
             arrows.forEach(arrow => {
@@ -197,7 +197,7 @@
             clearTimeout(timerId);             
             if (arrow.classList.contains('slider__button--direction--right')) {
                 srcSliderImagesIndex == 0 ? srcSliderImagesIndex = srcSliderImages.length - 1 : srcSliderImagesIndex--;
-                rimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
+                rimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center/contain';
                 cimage.style.transform = 'translateX(-100%)';
                 rimage.style.transform = 'translateX(-100%)';
                 cimage.style.transition = 'transform linear 1s';
@@ -212,7 +212,7 @@
                 ibuttonSecond.style.cursor = 'auto';            
             } else {
                 srcSliderImagesIndex == srcSliderImages.length - 1 ? srcSliderImagesIndex = 0 : srcSliderImagesIndex++;
-                limage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center';
+                limage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center/contain';
                 limage.style.transform = 'translateX(100%)';
                 cimage.style.transform = 'translateX(100%)';
                 limage.style.transition = 'transform linear 1s';
