@@ -302,4 +302,8 @@
             }
         });
     }
+
+    document.querySelector(".burger").addEventListener('click', function () {
+        target.classList.add('burger')
+    })
 })();

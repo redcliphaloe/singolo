@@ -5,6 +5,7 @@ html {
 .wrapper {    
     margin: auto;   
     max-width: 1020px;
+    background-color: #2d303a;
 }
 
 .anchor {
@@ -28,6 +29,10 @@ html {
     top: 0;
     width: 100%;
     z-index: 100;    
+}
+
+.burger {
+    display: none;
 }
 
 .logo {
@@ -636,10 +641,75 @@ html {
         box-shadow: none;
         max-height: 71px;
         width: 100vw;
+        padding: 0 20px;
+    }
+
+    .burger {
+        display: inline-block;
+        cursor: pointer;
+        margin: 6.8667vw 0 0 0.2667vw;
+    }
+
+    .header .header__logo {
+        margin: auto;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19.6875px;
+        line-height: 24px;     
+        letter-spacing: -0.03em;        
+        color: #FFFFFF;      
+        padding-right: 15px;  
+        display: inline-block;
+        margin: 0 0 0 26vw;         
     }
 
     .menu {
         display: none;
+    }
+
+    .menu .menu__list {
+        flex-direction: column;  
+    }    
+
+    .menu .menu__item:nth-child(n+2)::before {  
+        content: none;
+    }
+
+    .header.header--burger {
+        height: 100vh;
+        max-height: unset;
+        width: 74.1333vw;
+        display: block;
+    }
+
+    .burger.burger--burger {
+        transform: rotate(90deg);
+    }
+
+    .logo.logo--burger {
+        margin: 0 0 0 5vw;
+    }
+
+    .menu.menu--burger {
+        height: 100%;
+        margin: 0;
+        padding-left: 13.6vw;
+        padding-top: 48.5333vw;    
+        display: block;    
+    }
+
+    .menu.menu--burger li {
+        margin-bottom: 28px;
+    }
+
+    .menu.menu--burger a {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: -0.035em;  
     }
 
     .main {
@@ -1121,6 +1191,5 @@ html {
         left: 46.5vw;
         top: 18.5vw;
         width: 32.6471vw;
-    }     
-   
+    }        
 }
