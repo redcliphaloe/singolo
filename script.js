@@ -192,7 +192,7 @@
     let rimage = document.querySelector('.slider__image--right');
     let timerId = setTimeout(() => {
         rbutton.click();
-    }, 500000000);
+    }, 5000);
     cimage.style.background = 'url("' + srcSliderImages[srcSliderImagesIndex] + '") no-repeat center/contain';        
     arrows.forEach(arrow => {
         arrow.addEventListener('click', function () {    
