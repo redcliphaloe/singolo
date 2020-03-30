@@ -37,6 +37,11 @@
                     menuLinks[i].classList.remove("menu__link--active");
                 }        
                 menuLink.classList.add("menu__link--active");
+
+                document.querySelector(".burger").classList.remove('burger--burger');
+                document.querySelector(".header").classList.remove('header--burger');
+                document.querySelector(".logo").classList.remove('logo--burger');
+                document.querySelector(".menu").classList.remove('menu--burger');
             });	
         }
     }
@@ -292,7 +297,7 @@
     function addSetActiveMenuLink() {
         anchors.forEach(element => {
             document.querySelector('a[href="#' +  element.getAttribute('id')).classList.remove("menu__link--active");
-            let kostyl = element.getAttribute('id') == 'contact' ? 89 : 0;             
+            let kostyl = element.getAttribute('id') == 'contact' ? 89 : 0; 
             if ((element.parentNode.offsetTop + element.offsetTop - kostyl <= pageYOffset) && 
                 (pageYOffset < element.parentNode.offsetTop + element.offsetTop + element.parentNode.offsetHeight)) {
                 document.querySelector('a[href="#' +  element.getAttribute('id')).classList.add("menu__link--active");
@@ -304,6 +309,9 @@
     }
 
     document.querySelector(".burger").addEventListener('click', function () {
-        target.classList.add('burger')
+        event.target.classList.add('burger--burger');
+        document.querySelector(".header").classList.add('header--burger');
+        document.querySelector(".logo").classList.add('logo--burger');
+        document.querySelector(".menu").classList.add('menu--burger');
     })
 })();

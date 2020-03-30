@@ -4,8 +4,7 @@ html {
 
 .wrapper {    
     margin: auto;   
-    max-width: 1020px;
-    background-color: #2d303a;
+    max-width: 1020px;    
 }
 
 .anchor {
@@ -635,6 +634,7 @@ html {
     .wrapper {
         min-width: 320px;
         width: 100%;
+        background-color: #2d303a;
     }
 
     .header {
@@ -647,7 +647,9 @@ html {
     .burger {
         display: inline-block;
         cursor: pointer;
-        margin: 6.8667vw 0 0 0.2667vw;
+        margin: -0.1333vw 0 0 0.2667vw;
+        /* margin: 6.8667vw 0 0 0.2667vw; */
+        /* margin: -0.1333vw 0 0 0.2667vw; */
     }
 
     .header .header__logo {
@@ -661,7 +663,7 @@ html {
         color: #FFFFFF;      
         padding-right: 15px;  
         display: inline-block;
-        margin: 0 0 0 26vw;         
+        margin: 0 27vw 0 0;         
     }
 
     .menu {
@@ -687,8 +689,8 @@ html {
         transform: rotate(90deg);
     }
 
-    .logo.logo--burger {
-        margin: 0 0 0 5vw;
+    .logo.logo--burger {   
+        margin: 26px 0 0 5vw;
     }
 
     .menu.menu--burger {
@@ -965,6 +967,10 @@ html {
 
     .header {
         width: 100vw;
+    }
+
+    .logo.header__logo {
+        margin: 0 30vw 0 0;
     }
 
     .menu .menu__list {
