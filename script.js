@@ -291,6 +291,7 @@
     
     function addSetActiveMenuLink() {
         anchors.forEach(element => {
+            document.querySelector('a[href="#' +  element.getAttribute('id')).classList.remove("menu__link--active");
             let kostyl = element.getAttribute('id') == 'contact' ? 89 : 0;             
             if ((element.parentNode.offsetTop + element.offsetTop - kostyl <= pageYOffset) && 
                 (pageYOffset < element.parentNode.offsetTop + element.offsetTop + element.parentNode.offsetHeight)) {
@@ -298,8 +299,6 @@
                 if (kostyl) {
                     document.querySelector('a[href="#about').classList.remove("menu__link--active");
                 }
-            } else {
-                document.querySelector('a[href="#' +  element.getAttribute('id')).classList.remove("menu__link--active");
             }
         });
     }
