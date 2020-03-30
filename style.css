@@ -626,7 +626,7 @@ html {
     background-color: #000;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 767px) {
     .wrapper {
         min-width: 320px;
         width: 100%;
@@ -648,7 +648,7 @@ html {
 
     .slider {
         box-shadow: 0 3px #ea676b;
-        height: 218px;
+        height: 58.1333vw;
     }
 
     .slider .slider__image {
@@ -657,18 +657,18 @@ html {
     }
 
     .slider .slider__button {
-        margin-top: 97px;
-        left: 9px;
+        margin-top: 25.8667vw;
+        left: 2.4000vw;
     }
     
     .slider .slider__button.slider__button--direction--right {
-        right: 9px;
+        right: 2.4000vw;
     }   
 
     .features {
         box-shadow: none;
-        height: 1035px;
-        padding: 27px 29px 0 24px;
+        max-height: 1035px;
+        padding: 7.2000vw 7.7333vw 5.8667vw 6.4000vw;
     }
     
     .features .features__description {
@@ -676,65 +676,80 @@ html {
     }    
 
     .features .features__item {
-        margin-left: -4px;
+        margin-left: 2.9333vw;
         margin-top: 8px;
     }    
 
     .features .features__item:nth-of-type(2) {
-        margin-left: -6px;
+        margin-left: 2.9333vw;
         margin-top: 21px;
     }   
 
     .features .features__item:nth-of-type(3) {
-        margin-left: -6px;
+        margin-left: 2.4vw;
         margin-top: 20px;
     }      
 
     .features .features__item:nth-of-type(4) {
-        margin-left: -5px;
+        margin-left: 2.6667vw;
         margin-top: 20px;
     }     
 
     .features .features__item:nth-of-type(5) {
-        margin-left: -5px;
+        margin-left: 2.6667vw;
         margin-top: 21px;
     }      
     
     .features .features__item:nth-of-type(6) {
-        margin-left: -6px;
+        margin-left: 2.4vw;
         margin-top: 20px;
     }       
 
+    .feature {
+        width: 83.7333vw;     
+    }
+
+    .feature .feature__description {
+        width: 100%;
+    }
+
     .section {
-        padding: 51px 30px;   
+        padding: 13.6vw 8vw 3vw;   
     }
 
     .section .section__description {
         text-align: left;
-        padding-right: 7px;
+        padding-right: 1.8667vw;
     }    
 
     .portfolio {
-        height: 838px;
+        height: unset;
     }
     
     .imageGallery .imageGallery__filterList {
         margin: 15px 0 0 0;
     }    
 
+    @media (max-width: 355px) {
+        .imageGallery .imageGallery__filterButton {
+            margin-right: 2.6667vw;
+            padding: 0 0.7vw; 
+        }
+    }
+
     .imageGallery .imageGallery__image {
-        height: 128px;
-        width: 151px;
-        margin: 6px 0 8px 0;
+        height: 34.1333vw;
+        width: 40.2667vw;
+        margin: 1.6vw 0 2.1333vw 0;
     }
 
     .imageGallery .imageGallery__image img {
         height: unset;
-        width: 153px;
+        width: 40.8000vw;
     }    
 
     .imageGallery .imageGallery__item:nth-of-type(4n+1) .imageGallery__image img {
-        width: 153px;
+        width: 40.8000vw;
     }   
     
     .imageGallery .imageGallery__item:nth-of-type(n+9) {
@@ -743,7 +758,7 @@ html {
 
     .about {
         box-shadow: none;
-        padding: 48px 32px;  
+        padding: 48px 8.5333vw;  
         padding-bottom: 40px; 
     }    
 
@@ -756,19 +771,20 @@ html {
     }    
 
     .photoGalleryItem {
-        width: 314px;
+        width: 83.7333vw;
     } 
 
     .photoGalleryItem .photoGalleryItem__image {
-        height: 314px;
+        height: 83.7333vw;
     }    
     
     .photoGalleryItem .photoGalleryItem__image img {
-        height: 314px;
+        height: 83.7333vw;
     }     
 
     .photoGalleryItem .photoGalleryItem__description {
         margin: 4px 0 0 0;
+        width: 100%;
     }    
 
     .photoGalleryItem .photoGalleryItem__socialList {
@@ -786,7 +802,7 @@ html {
     }       
 
     .section.feedback {
-        padding: 53px 30px;
+        padding: 53px 8vw;
         padding-bottom: 23px;
     }    
 
@@ -801,7 +817,7 @@ html {
     }    
     .form {
         flex-basis: unset;
-        width: 315px;
+        width: 84vw;
         margin-bottom: 19px;
     }    
 
