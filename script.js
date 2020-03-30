@@ -1,6 +1,6 @@
 ;(function() {
     let menuLinks = document.querySelectorAll(".menu__link");
-    addToggleActiveMenuLinks(menuLinks);    
+    addToggleActiveMenuLinks(menuLinks);        
     
     const srcSliderImages = ['assets/images/slider image 1.png', 'assets/images/slider image 2.png'];
     const backgroundColorSliderImages = ['#F06C64', '#648BF0'];
@@ -282,5 +282,25 @@
             ibuttonSecond.remove();
             iscreenSecond.remove();                    
         }
+    }
+
+
+    let anchors = document.querySelectorAll(".anchor");
+    document.addEventListener("scroll", addSetActiveMenuLink);
+    window.onload = addSetActiveMenuLink();
+    
+    function addSetActiveMenuLink() {
+        anchors.forEach(element => {
+            let kostyl = element.getAttribute('id') == 'contact' ? 89 : 0;             
+            if ((element.parentNode.offsetTop + element.offsetTop - kostyl <= pageYOffset) && 
+                (pageYOffset < element.parentNode.offsetTop + element.offsetTop + element.parentNode.offsetHeight)) {
+                document.querySelector('a[href="#' +  element.getAttribute('id')).classList.add("menu__link--active");
+                if (kostyl) {
+                    document.querySelector('a[href="#about').classList.remove("menu__link--active");
+                }
+            } else {
+                document.querySelector('a[href="#' +  element.getAttribute('id')).classList.remove("menu__link--active");
+            }
+        });
     }
 })();
